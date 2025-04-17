@@ -1,0 +1,43 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+    margin-inline-start: 10%;
+    padding: 20px 0;
+    &_title {
+      font-weight: 600;
+      font-size: 30px;
+      line-height: 100%;
+      color: var(--color-pink);
+      
+      &::before {
+        content: "Brainly ";
+        color: var(--color-blue);
+      }
+    }
+    
+    & nav
+      ul {
+        display: flex;
+        justify-content: space-between;
+        gap: 40px;
+        list-style: none;
+        
+        li a {
+          text-decoration: none;
+          color: var(--color-indigo);
+          font-weight: 500;
+          transition: color 0.3s ease;
+          
+          &:hover {
+            color: var(--color-purple);
+          }
+          
+          &.active {
+            color: var(--color-pink);
+            font-weight: 700;
+          }
+        }
+      
+    }
+  }
