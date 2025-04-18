@@ -1,18 +1,99 @@
 .info {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  margin-inline: 8%;
   flex-wrap: wrap;
+  margin-block: 6rem;
+  gap: 2rem;
+
   &_image {
-    width: 450px;
+    max-width: 450px;
+    width: 45%;
+    min-width: 350px;
     height: 700px;
     border-radius: 30px;
     position: relative;
-    background: linear-gradient(317.93deg, #2447F9 0%, #6F86FF 99.1%, #8FA2FF 99.11%);
-    &_profile{
-        position: absolute;
-         bottom: 0;
+    background: linear-gradient(
+      317.93deg,
+      #2447f9 0%,
+      #6f86ff 99.1%,
+      #8fa2ff 99.11%
+    );
+
+    &_profile {
+      position: absolute;
+      bottom: 0;
+      max-width: 100%;
+    }
+
+    &_chat_icon {
+      width: 90px;
+      height: 90px;
+      background: linear-gradient(311.42deg, #ff6527 16.95%, #ffa17b 97.27%);
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      backdrop-filter: blur(20px);
+      top: 45%;
+      left: 10%;
+    }
+  }
+
+  &_cards {
+    max-width: 55%;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    &_title {
+      font-weight: 600;
+      font-size: 36px;
+      color: var(--color-gray);
+    }
+
+    &_wrapper {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 40px;
+      width: 100%;
+      &  h2 {
+        font-weight: 500;
+        font-size: 22px;
+        color: var(--color-black);
+      }
+      &  p {
+        font-weight: 400;
+        font-size: 14px;
+        letter-spacing: 1px;
+        color: var(--color-gray);
+      }
+    }
+  }
+}
+
+/* responsive breakpoints */
+@media (max-width: 1024px) {
+  .info {
+    flex-direction: column;
+    align-items: center;
+
+    &_image,
+    &_cards {
+      max-width: 100%;
+    }
+
+    &_cards_wrapper {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .info {
+    &_cards_wrapper {
+      grid-template-columns: 1fr;
     }
   }
 }
