@@ -1,3 +1,5 @@
+
+import Button from "@/components/button/button";
 import bannerImg from "../../../assets/images/banner_image_profile.png";
 import styles from "./banner.module.scss";
 
@@ -11,13 +13,14 @@ const Banner = () => {
           Cari jawaban dari pertanyaan yang kamu cari saat ini dengan mudah dan cepat dari seluruh dunia
         </p>
         <div className={styles.buttons}>
-          <button className={styles.register_btn}>Daftar</button>
-          <button className={styles.login_btn}>Masuk</button>
+          <Button text="Daftar" type="secondary"/>
+          <Button text="Masuk" className={styles.login_btn} type="primary" />
+
         </div>
       </div>
 
       <div className={styles.banner_image}>
-        
+
         <img src={bannerImg} alt="Person thinking" className={styles.banner_image_profile} />
         <div className={styles.bubble_question}>
           <span>?</span>
