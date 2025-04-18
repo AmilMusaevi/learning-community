@@ -1,6 +1,7 @@
 
 import Header from './layouts/header/header'
 import Banner from './layouts/sections/banner/banner'
+import Info from './layouts/sections/info/info'
 
 function App() {
 
@@ -8,6 +9,7 @@ function App() {
     <>
      <Header/>
      <Banner/>
+     <Info/>
     </>
   )
 }

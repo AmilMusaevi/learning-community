@@ -1,5 +1,6 @@
-import bannerImg from "../../../assets/images/banner_profil.svg"
+import bannerImg from "../../../assets/images/banner_image_profile.png";
 import styles from "./banner.module.scss";
+
 const Banner = () => {
   return (
     <div className={styles.banner}>
@@ -13,15 +14,11 @@ const Banner = () => {
           <button className={styles.register_btn}>Daftar</button>
           <button className={styles.login_btn}>Masuk</button>
         </div>
-
-
       </div>
 
-
-
-
       <div className={styles.banner_image}>
-        <img src={bannerImg} alt="Person thinking" className={styles.banner_image_profile}/>
+        
+        <img src={bannerImg} alt="Person thinking" className={styles.banner_image_profile} />
         <div className={styles.bubble_question}>
           <span>?</span>
         </div>
