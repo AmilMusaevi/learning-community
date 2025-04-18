@@ -1,0 +1,18 @@
+.info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-inline: 8%;
+  flex-wrap: wrap;
+  &_image {
+    width: 450px;
+    height: 700px;
+    border-radius: 30px;
+    position: relative;
+    background: linear-gradient(317.93deg, #2447F9 0%, #6F86FF 99.1%, #8FA2FF 99.11%);
+    &_profile{
+        position: absolute;
+         bottom: 0;
+    }
+  }
+}
