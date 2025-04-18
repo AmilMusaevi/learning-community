@@ -1,3 +1,5 @@
+
+import Button from "@/components/button/button";
 import bannerImg from "../../../assets/images/banner_image_profile.png";
 import chatSvg from "@/assets/icons/chat.svg";
 import styles from "./banner.module.scss";
@@ -14,8 +16,9 @@ const Banner = () => {
             dan cepat dari seluruh dunia
           </p>
           <div className={styles.buttons}>
-            <button className={styles.register_btn}>Daftar</button>
-            <button className={styles.login_btn}>Masuk</button>
+          <Button text="Daftar" type="secondary"/>
+          <Button text="Masuk" className={styles.login_btn} type="primary" />
+
           </div>
         </div>
       </div>
