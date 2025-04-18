@@ -212,6 +212,40 @@
   @media (max-width: 768px) {
     gap: 40px;
     flex-direction: column-reverse;
+    
+    .bubble {
+      &_chat {
+        width: 100px;
+        height: 70px;
+        left: -10%;
+        top: 30%;
+        &_question {
+          width: 40px;
+          height: 40px;
+          top: -35%;
+        }
+
+        &_text {
+          font-size: 15px;
+          text-align: center;
+          line-height: 13px;
+        }
+      }
+
+      &_info {
+        width: 60px;
+        height: 60px;
+        bottom: 30px;
+        right: 6px;
+
+        &_icon {
+          img {
+            width: 50%;
+            height: 50%;
+          }
+        }
+      }
+    }
 
     &_info {
       max-width: 100%;
@@ -223,6 +257,25 @@
 
       .buttons {
         justify-content: center;
+
+        button {
+          width: 150px;
+          height: 40px;
+          border-radius: 50px;
+          cursor: pointer;
+          font-weight: 500;
+          font-size: 18px;
+        }
+      }
+
+      .title {
+        font-size: 25px;
+      }
+      .tag {
+        font-size: 12px;
+      }
+      .description {
+        font-size: 14px;
       }
     }
 
