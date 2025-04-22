@@ -48,7 +48,7 @@ $large-desktop: 1280px;
   width: 100%;
   max-width: 1400px;
   margin: 0 auto;
-  padding: 4rem 1rem;
+  padding: 4rem 0rem;
   
   @include responsive(mobile) {
     padding: 2rem 1rem;
@@ -74,7 +74,7 @@ $large-desktop: 1280px;
   
   &_grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 1.5rem;
     
     @include responsive(mobile) {

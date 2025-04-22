@@ -1,0 +1,309 @@
+// Variables
+$primary-color: #4e6bff;
+$primary-hover: #3a54d6;
+$text-dark: #333;
+$text-muted: #666;
+$light-bg: #f5f5f5;
+$border-color: #ddd;
+$success-bg: #d4edda;
+$success-text: #155724;
+$error-bg: #f8d7da;
+$error-text: #721c24;
+$disabled-bg: #a0a0a0;
+$box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+$border-radius: 10px;
+$font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+// Breakpoints
+$breakpoint-sm: 576px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+$breakpoint-xl: 1200px;
+
+// Mixins
+@mixin respond-to($breakpoint) {
+  @if $breakpoint == sm {
+    @media (max-width: $breakpoint-sm) { @content; }
+  } @else if $breakpoint == md {
+    @media (max-width: $breakpoint-md) { @content; }
+  } @else if $breakpoint == lg {
+    @media (max-width: $breakpoint-lg) { @content; }
+  } @else if $breakpoint == xl {
+    @media (max-width: $breakpoint-xl) { @content; }
+  }
+}
+
+// Focus styles for accessibility
+@mixin focus-outline {
+  outline: 3px solid rgba($primary-color, 0.5);
+  outline-offset: 2px;
+}
+
+// Main container
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  font-family: $font-family;
+  
+  @include respond-to(md) {
+    padding: 30px 16px;
+  }
+  
+  @include respond-to(sm) {
+    padding: 20px 12px;
+  }
+}
+
+// Header section
+.header {
+  text-align: center;
+  margin-bottom: 50px;
+  
+  h1 {
+    font-size: 2.5rem;
+    color: $text-dark;
+    margin-bottom: 15px;
+    
+    @include respond-to(md) {
+      font-size: 2rem;
+    }
+    
+    @include respond-to(sm) {
+      font-size: 1.8rem;
+    }
+  }
+  
+  p {
+    font-size: 1.1rem;
+    color: $text-muted;
+    max-width: 700px;
+    margin: 0 auto;
+    
+    @include respond-to(sm) {
+      font-size: 1rem;
+    }
+  }
+}
+
+// Content layout
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  
+  @include respond-to(lg) {
+    gap: 20px;
+  }
+  
+  @include respond-to(md) {
+    flex-direction: column;
+    gap: 30px;
+  }
+}
+
+// Contact information section
+.infoSection {
+  flex: 1;
+  min-width: 300px;
+  background-color: $light-bg;
+  padding: 30px;
+  border-radius: $border-radius;
+  align-self: flex-start;
+  
+  @include respond-to(lg) {
+    padding: 25px;
+  }
+  
+  @include respond-to(md) {
+    width: 100%;
+    order: 2; // Move below form on mobile
+  }
+  
+  @include respond-to(sm) {
+    padding: 20px;
+    min-width: auto;
+  }
+}
+
+.infoItem {
+  margin-bottom: 25px;
+  
+  &:last-child {
+    margin-bottom: 0;
+  }
+  
+  i {
+    font-size: 24px;
+    color: $primary-color;
+    margin-bottom: 10px;
+    display: inline-block;
+    
+    @include respond-to(sm) {
+      font-size: 20px;
+      margin-bottom: 8px;
+    }
+  }
+  
+  h3 {
+    font-size: 1.2rem;
+    color: $text-dark;
+    margin-bottom: 8px;
+    
+    @include respond-to(sm) {
+      font-size: 1.1rem;
+      margin-bottom: 6px;
+    }
+  }
+  
+  p {
+    color: $text-muted;
+    line-height: 1.5;
+    
+    @include respond-to(sm) {
+      font-size: 0.95rem;
+    }
+  }
+}
+
+// Contact form section
+.formSection {
+  flex: 2;
+  min-width: 300px;
+  padding: 30px;
+  background-color: #fff;
+  border-radius: $border-radius;
+  box-shadow: $box-shadow;
+  
+  @include respond-to(lg) {
+    padding: 25px;
+  }
+  
+  @include respond-to(md) {
+    width: 100%;
+    order: 1; // Move above info on mobile
+  }
+  
+  @include respond-to(sm) {
+    padding: 20px;
+    min-width: auto;
+  }
+  
+  h2 {
+    font-size: 1.8rem;
+    color: $text-dark;
+    margin-bottom: 25px;
+    
+    @include respond-to(sm) {
+      font-size: 1.5rem;
+      margin-bottom: 20px;
+    }
+  }
+}
+
+// Form elements
+.formGroup {
+  margin-bottom: 20px;
+  
+  label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: $text-dark;
+    
+    @include respond-to(sm) {
+      margin-bottom: 6px;
+    }
+  }
+  
+  input,
+  textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid $border-color;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    font-family: inherit;
+    
+    &:focus {
+      border-color: $primary-color;
+      @include focus-outline;
+    }
+    
+    @include respond-to(sm) {
+      padding: 10px 12px;
+      font-size: 0.95rem;
+    }
+  }
+  
+  textarea {
+    resize: vertical;
+    min-height: 120px;
+  }
+}
+
+// Submit button
+.submitBtn {
+  background-color: $primary-color;
+  color: white;
+  border: none;
+  padding: 14px 28px;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.1s;
+  font-weight: 500;
+  width: 100%;
+  
+  &:hover:not(:disabled) {
+    background-color: $primary-hover;
+  }
+  
+  &:active:not(:disabled) {
+    transform: translateY(1px);
+  }
+  
+  &:focus {
+    @include focus-outline;
+  }
+  
+  &:disabled {
+    background-color: $disabled-bg;
+    cursor: not-allowed;
+    opacity: 0.8;
+  }
+  
+  @include respond-to(sm) {
+    padding: 12px 20px;
+    font-size: 0.95rem;
+  }
+}
+
+// Message styles
+.successMessage {
+  background-color: $success-bg;
+  color: $success-text;
+  padding: 15px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  
+  @include respond-to(sm) {
+    padding: 12px;
+    font-size: 0.95rem;
+  }
+}
+
+.errorMessage {
+  background-color: $error-bg;
+  color: $error-text;
+  padding: 15px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  
+  @include respond-to(sm) {
+    padding: 12px;
+    font-size: 0.95rem;
+  }
+}
+

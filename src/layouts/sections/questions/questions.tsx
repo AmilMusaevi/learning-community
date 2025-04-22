@@ -1,15 +1,16 @@
-import React from "react";
+import avatar1 from "@/assets/images/human1.jpg";
+import avatar2 from "@/assets/images/human2.jpg";
+import avatar3 from "@/assets/images/human1.jpg";
 import styles from "./questions.module.scss";
 
 export const Questions = () => {
-  // Sample data for the questions section
   const questions = [
     {
       id: 1,
       user: {
         name: "Rizka Amalia",
         role: "Penanya",
-        avatar: "/path/to/avatar1.jpg" // Replace with actual path
+        avatar: avatar1
       },
       question: "Apa yang dimaksud dengan IoT (Internet of Things) dan jelaskan contohnya?"
     },
@@ -18,7 +19,7 @@ export const Questions = () => {
       user: {
         name: "Rizka Amalia",
         role: "Penanya",
-        avatar: "/path/to/avatar1.jpg" // Replace with actual path
+        avatar: avatar2
       },
       question: "Apa yang dimaksud dengan IoT (Internet of Things) dan jelaskan contohnya?"
     },
@@ -27,14 +28,14 @@ export const Questions = () => {
       user: {
         name: "Haikal Putra",
         role: "Penanya",
-        avatar: "/path/to/avatar2.jpg" // Replace with actual path
+        avatar: avatar3
       },
       question: "Apa yang dimaksud dengan IoT (Internet of Things) dan jelaskan contohnya?"
     }
   ];
 
   return (
-    <div className={styles.questions}>
+    <div className={styles.questions} id="questions">
       <div className={styles.questions_header}>
         <h2 className={styles.questions_title}>Pertanyaan</h2>
         <p className={styles.questions_subtitle}>Pertanyaan yang sering muncul</p>

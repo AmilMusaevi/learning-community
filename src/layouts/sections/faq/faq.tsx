@@ -1,10 +1,10 @@
-import styles from "./faq.module.scss";
 import FaqPng from "@/assets/images/faq.png";
 import Button from "@/components/button/button";
+import styles from "./faq.module.scss";
 
-export const Faq = () => {
+ const Faq = () => {
   return (
-    <div className={styles.faq}>
+    <div className={styles.faq} id="faq">
       <div className={styles.faq_tentag}>
         <div className={styles.faq_tentag_wrapper}>
           <h3 className={styles.faq_tentag_subtitle}>Tentang</h3>
@@ -31,3 +31,5 @@ export const Faq = () => {
     </div>
   );
 };
+
+export default Faq
