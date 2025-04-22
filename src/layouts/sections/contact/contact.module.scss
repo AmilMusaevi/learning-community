@@ -12,7 +12,6 @@ $error-text: #721c24;
 $disabled-bg: #a0a0a0;
 $box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
 $border-radius: 10px;
-$font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
 // Breakpoints
 $breakpoint-sm: 576px;
@@ -44,7 +43,6 @@ $breakpoint-xl: 1200px;
   max-width: 1200px;
   margin: 0 auto;
   padding: 40px 20px;
-  font-family: $font-family;
   
   @include respond-to(md) {
     padding: 30px 16px;
@@ -307,3 +305,10 @@ $breakpoint-xl: 1200px;
   }
 }
 
+.whatsappLink{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+  color: $text-muted;
+}

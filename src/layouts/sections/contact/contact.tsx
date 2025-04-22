@@ -1,4 +1,5 @@
 import React, { useState, useRef, ChangeEvent, FormEvent } from 'react';
+import { FaWhatsapp } from "react-icons/fa6";
 import emailjs from '@emailjs/browser';
 import styles from './contact.module.scss';
 
@@ -30,6 +31,9 @@ const ContactPage: React.FC = () => {
     const [success, setSuccess] = useState<boolean>(false);
     const [error, setError] = useState<string | null>(null);
 
+
+    const phoneNumber = "+99477555555";
+
     const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>): void => {
         const { name, value } = e.target;
         setFormData({
@@ -47,9 +51,9 @@ const ContactPage: React.FC = () => {
         if (formRef.current) {
 
             const {
-                VITE_EMAILJS_SERVICE_ID:serviceId,
-                VITE_EMAILJS_TEMPLATE_ID:templateId,
-                VITE_EMAILJS_PUBLIC_KEY:publicKey,
+                VITE_EMAILJS_SERVICE_ID: serviceId,
+                VITE_EMAILJS_TEMPLATE_ID: templateId,
+                VITE_EMAILJS_PUBLIC_KEY: publicKey,
             } = import.meta.env;
             emailjs.sendForm(serviceId, templateId, formRef.current, publicKey)
                 .then((result: EmailJSResponse) => {
@@ -88,7 +92,17 @@ const ContactPage: React.FC = () => {
                     <div className={styles.infoItem}>
                         <i className="fa fa-phone" aria-hidden="true"></i>
                         <h3>Telefon</h3>
-                        <p>+994 50 123 45 67</p>
+
+                        <a
+                            href={`https://wa.me/${phoneNumber}`}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className={styles.whatsappLink}
+                            aria-label="Contact us on WhatsApp"
+                        >
+                            <span>{phoneNumber}</span>
+                            <FaWhatsapp className={styles.whatsappIcon} />
+                        </a>
                     </div>
 
                     <div className={styles.infoItem}>

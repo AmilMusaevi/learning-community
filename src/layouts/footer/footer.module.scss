@@ -108,6 +108,7 @@
       }
     }
   
+    
     &_bottom {
       margin-inline: 5%;
   
@@ -210,6 +211,14 @@
     }
   }
   
+  .whatsappLink{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    color: var(--color-white);
+    text-align: center;
+  }
   .ellipse_small {
     position: absolute;
     top: 160px;
@@ -236,3 +245,5 @@
       height: auto;
     }
   }
+
+ 

@@ -1,9 +1,13 @@
+import { FaWhatsapp } from "react-icons/fa6";
 import Button from "@/components/button/button";
 import ellipseBig from "@/assets/icons/orbit.svg";
 import ellipseSmall from "@/assets/icons/ellipseSmall.svg";
 import styles from "./Footer.module.scss";
 
 const Footer = () => {
+  const phoneNumber = "+99477555555";
+
+
   return (
     <footer className={styles.footer}>
       <div className={styles.footer_circles}>
@@ -12,13 +16,23 @@ const Footer = () => {
         </div>
         <div className={styles.footer_ellipse}>
           <div className={styles.footer_ellipse_text}>
-            <h2>Mau nanya apa?</h2>
+            <h2>Sualınız var ?</h2>
             <div></div>
             <Button
-              text="Tanya sekarang"
               type="secondary"
               style={{ minWidth: "200px" }}
-            />
+            >
+              <a
+                href={`https://wa.me/${phoneNumber}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={styles.whatsappLink}
+                aria-label="Contact us on WhatsApp"
+              >
+                <span>{phoneNumber}</span>
+                <FaWhatsapp className={styles.whatsappIcon} />
+              </a>
+            </Button>
           </div>
         </div>
         <div className={styles.ellipse_small}>
