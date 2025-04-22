@@ -40,7 +40,6 @@
       -webkit-box-shadow: 0px 6px 12px 1px rgba(255, 127, 76, 1);
       -moz-box-shadow: 0px 6px 12px 1px rgba(255, 127, 76, 1);
       box-shadow: 0px 6px 12px 1px rgba(255, 127, 76, 1);
-
     }
   }
 
@@ -62,12 +61,12 @@
       grid-template-columns: repeat(2, 1fr);
       gap: 40px;
       width: 100%;
-      &  h2 {
+      & h2 {
         font-weight: 500;
         font-size: 22px;
         color: var(--color-black);
       }
-      &  p {
+      & p {
         font-weight: 400;
         font-size: 14px;
         letter-spacing: 1px;
@@ -78,26 +77,166 @@
 }
 
 /* responsive breakpoints */
+@media (max-width: 1200px) {
+  .info {
+    margin-block: 5rem;
+    gap: 1.5rem;
+    
+    &_image {
+      max-width: 400px;
+      height: 630px;
+      
+      &_chat_icon {
+        width: 80px;
+        height: 80px;
+      }
+    }
+    
+    &_cards {
+      &_title {
+        font-size: 32px;
+        margin-bottom: 1.5rem;
+      }
+      
+      &_wrapper {
+        gap: 30px;
+        
+        & h2 {
+          font-size: 20px;
+        }
+      }
+    }
+  }
+}
+
 @media (max-width: 1024px) {
   .info {
     flex-direction: column;
     align-items: center;
+    margin-block: 4rem;
 
-    &_image,
-    &_cards {
-      max-width: 100%;
+    &_image {
+      max-width: 380px;
+      min-width: 300px;
+      width: 100%;
+      height: 580px;
+      
+      &_chat_icon {
+        width: 70px;
+        height: 70px;
+      }
     }
 
-    &_cards_wrapper {
-      grid-template-columns: repeat(2, 1fr);
+    &_cards {
+      max-width: 100%;
+      
+      &_title {
+        text-align: center;
+        font-size: 30px;
+        margin-bottom: 2rem;
+      }
+      
+      &_wrapper {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+        
+        & h2 {
+          font-size: 18px;
+          margin-bottom: 0.5rem;
+        }
+        
+        & p {
+          font-size: 13px;
+        }
+      }
     }
   }
 }
 
 @media (max-width: 768px) {
   .info {
-    &_cards_wrapper {
-      grid-template-columns: 1fr;
+    justify-content: center;
+    margin-block: 3rem;
+    gap: 2.5rem;
+    
+    &_image {
+      max-width: 330px;
+      min-width: 250px;
+      height: 500px;
+      border-radius: 25px;
+      
+      &_chat_icon {
+        width: 60px;
+        height: 60px;
+      }
+    }
+    
+    &_cards {
+      &_title {
+        font-size: 26px;
+        margin-bottom: 1.5rem;
+      }
+      
+      &_wrapper {
+        grid-template-columns: 1fr;
+        justify-items: center;
+        gap: 25px;
+        
+        & h2 {
+          text-align: center;
+          font-size: 18px;
+        }
+        
+        & p {
+          text-align: center;
+          font-size: 13px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .info {
+    margin-block: 2.5rem;
+    gap: 2rem;
+    
+    &_image {
+      max-width: 280px;
+      min-width: 220px;
+      height: 420px;
+      border-radius: 20px;
+      
+      &_chat_icon {
+        width: 50px;
+        height: 50px;
+        
+        img {
+          width: 50%;
+          height: 50%;
+        }
+      }
+    }
+    
+    &_cards {
+      &_title {
+        font-size: 22px;
+        margin-bottom: 1.2rem;
+      }
+      
+      &_wrapper {
+        gap: 20px;
+        
+        & h2 {
+          font-size: 16px;
+          margin-bottom: 0.3rem;
+        }
+        
+        & p {
+          font-size: 12px;
+          letter-spacing: 0.5px;
+        }
+      }
     }
   }
 }

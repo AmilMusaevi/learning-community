@@ -2,6 +2,7 @@
 import Button from "@/components/button/button";
 import bannerImg from "../../../assets/images/banner_image_profile.png";
 import chatSvg from "@/assets/icons/chat.svg";
+import askSvg from "@/assets/icons/question.svg";
 import styles from "./banner.module.scss";
 
 const Banner = () => {
@@ -16,8 +17,8 @@ const Banner = () => {
             dan cepat dari seluruh dunia
           </p>
           <div className={styles.buttons}>
-          <Button text="Daftar" type="secondary"/>
-          <Button text="Masuk" className={styles.login_btn} type="primary" />
+            <Button text="Daftar" type="secondary" />
+            <Button text="Masuk" className={styles.login_btn} type="primary" />
 
           </div>
         </div>
@@ -32,7 +33,9 @@ const Banner = () => {
           />
 
           <div className={styles.bubble_chat}>
-            <div className={styles.bubble_chat_question}>?</div>
+            <div className={styles.bubble_chat_question}>
+              <img src={askSvg} alt="ask icon" />
+            </div>
             <div className={styles.bubble_chat_text}>
               <span>mau nanya nih</span>
             </div>

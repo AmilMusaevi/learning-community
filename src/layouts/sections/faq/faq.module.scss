@@ -1,10 +1,9 @@
-// Variables
 $primary-color: #4562f5;
-$accent-color: #22c58b; // Green color for "Tentang"
+$accent-color: #22c58b; 
 $text-color: #333;
-$text-secondary: #888888; // For description text
-$border-color: #dae1fd; // Color for borders
-$bg-color: #f9fafb; // Light gray background
+$text-secondary: #888888; 
+$border-color: #dae1fd; 
+$bg-color: #f9fafb;
 $container-padding: 2rem;
 $transition-speed: 0.3s;
 
@@ -55,7 +54,7 @@ $large-desktop: 1280px;
   width: 100%;
   max-width: 1400px;
   margin: 0 auto;
-  padding: 3rem 1rem 4rem;
+  padding: 3rem 0rem 4rem 0rem;
 
   @include responsive(mobile) {
     @include flex(column, flex-start, center);

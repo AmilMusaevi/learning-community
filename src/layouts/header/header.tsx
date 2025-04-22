@@ -1,28 +1,18 @@
-import { useEffect, useState } from "react";
-import { Link, Events, scrollSpy } from "react-scroll";
+import { useState } from "react";
+import { Link } from "react-scroll";
 import styles from "./header.module.scss";
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   
   const navItems = [
-    { id: "1", label: "Beranda" },
-    { id: "2", label: "Profil" },
-    { id: "3", label: "Tentang" },
-    { id: "4", label: "Pertanyaan" },
+    { id: "beranda", label: "Beranda" },
+    { id: "profil", label: "Profil" },
+    { id: "tentang", label: "Tentang" },
+    { id: "pertanyaan", label: "Pertanyaan" },
+    { id: "contact", label: "Contact" },
   ];
-  
-  useEffect(() => {
-    Events.scrollEvent.register("begin", () => {});
-    Events.scrollEvent.register("end", () => {});
-    scrollSpy.update();
 
-    return () => {
-      Events.scrollEvent.remove("begin");
-      Events.scrollEvent.remove("end");
-    };
-  }, []);
-  
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
   };

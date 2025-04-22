@@ -35,7 +35,7 @@ const Info = () => {
         },
     ];
     return (
-        <div className={styles.info}>
+        <div className={styles.info} id="info">
             <div className={styles.info_image}>
                 <img
                     src={infoImg}

@@ -1,19 +1,22 @@
 import { Layout } from "@/layouts/layout";
-import Header from "./layouts/header/header";
-import Banner from "./layouts/sections/banner/banner";
-import Info from "./layouts/sections/info/info";
-import { Faq } from "@/layouts/sections/faq/faq";
-import Questions from "@/layouts/sections/questions";
 
+import ScrollToTop from "./components/resetScroll/resetScroll";
+import { Banner, Contact, Faq, Footer, Header, Info, Questions, Review } from "./layouts/sections";
 function App() {
   return (
-    <Layout>
-      <Header />
-      <Banner />
-      <Info />
-      <Faq />
-      <Questions />
-    </Layout>
+    <>
+      <Layout>
+        <Header />
+        <Banner />
+        <Info />
+        <Faq />
+        <Questions />
+      </Layout>
+      <Review />
+      <Contact />
+      <Footer />
+      <ScrollToTop />
+    </>
   );
 }
 
