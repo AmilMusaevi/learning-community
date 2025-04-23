@@ -7,7 +7,7 @@ import styles from "./faq.module.scss";
     <div className={styles.faq} id="faq">
       <div className={styles.faq_tentag}>
         <div className={styles.faq_tentag_wrapper}>
-          <h3 className={styles.faq_tentag_subtitle}>Tentang</h3>
+          <h3 className={styles.faq_tentag_subtitle}>Niyə mən?</h3>
           <h2 className={styles.faq_tentag_title}>
             Membantu Pertanyaan Orang Lain
           </h2>
@@ -26,7 +26,7 @@ import styles from "./faq.module.scss";
             <img src={FaqPng} alt="faq image" />
           </div>
         </div>
-        <div className={styles.faq_reborn_tag}>Brainly Reborn</div>
+        <div className={styles.faq_reborn_tag}>Akademik ingilis dili</div>
       </div>
     </div>
   );

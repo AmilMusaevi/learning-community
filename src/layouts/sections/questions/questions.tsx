@@ -37,7 +37,7 @@ export const Questions = () => {
   return (
     <div className={styles.questions} id="questions">
       <div className={styles.questions_header}>
-        <h2 className={styles.questions_title}>Pertanyaan</h2>
+        <h2 className={styles.questions_title}>Kursun formatı</h2>
         <p className={styles.questions_subtitle}>Pertanyaan yang sering muncul</p>
       </div>
 

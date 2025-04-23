@@ -4,25 +4,25 @@ import styles from "./header.module.scss";
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
-  
+
   const navItems = [
-    { id: "beranda", label: "Beranda" },
-    { id: "profil", label: "Profil" },
-    { id: "tentang", label: "Tentang" },
-    { id: "pertanyaan", label: "Pertanyaan" },
-    { id: "contact", label: "Contact" },
+    { id: "home", label: "Ana səhifə" },
+    { id: "about", label: "Haqqımda" },
+    { id: "courses", label: "Kurslar" },
+    { id: "students", label: "Tələbələr" },
+    { id: "contact", label: "Əlaqə" },
   ];
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
   };
-  
+
   return (
     <div className={styles.header}>
-      <h2 className={styles.header_title}>Reborn</h2>
+      <h2 className={styles.header_title}>IELTS</h2>
 
-      <div 
-        className={styles.menu_toggle} 
+      <div
+        className={styles.menu_toggle}
         onClick={toggleMenu}
         aria-label="Toggle menu"
       >
@@ -41,7 +41,7 @@ const Header = () => {
                 smooth={true}
                 duration={500}
                 activeClass="active"
-                onClick={() => setMenuOpen(false)} 
+                onClick={() => setMenuOpen(false)}
               >
                 {item.label}
               </Link>

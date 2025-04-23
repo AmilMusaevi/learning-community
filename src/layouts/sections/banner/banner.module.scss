@@ -136,6 +136,7 @@
           color: var(--color-blue);
           font-weight: 500;
           font-size: 18px;
+          margin: 0 12px;
         }
 
         &_question {
@@ -190,7 +191,7 @@
   @media (max-width: 1100px) {
     min-height: 480px;
     padding: 3rem 1.5rem;
-    
+
     &_info {
       max-width: 45%;
 
@@ -219,23 +220,23 @@
         height: 320px;
         margin-top: 30px;
       }
-      
+
       .bubble {
         &_chat {
           width: 150px;
           height: 85px;
           left: -15%;
-          
+
           &_text {
             font-size: 16px;
           }
-          
+
           &_question {
             width: 55px;
             height: 55px;
           }
         }
-        
+
         &_info {
           width: 75px;
           height: 75px;
@@ -255,7 +256,7 @@
       margin-bottom: 1.5rem;
       justify-content: center;
       align-items: center;
-      
+
       &_wrapper {
         width: 100%;
         align-items: center;
@@ -275,7 +276,7 @@
         margin-bottom: 1rem;
         text-align: center;
       }
-      
+
       .description {
         font-size: 13px;
         margin-bottom: 1rem;
@@ -300,7 +301,7 @@
         height: 250px;
         margin-top: 20px;
       }
-      
+
       &_profile {
         width: 110%;
         height: 128%;
@@ -313,12 +314,12 @@
           height: 60px;
           left: -10%;
           top: 30%;
-          
+
           &_question {
             width: 35px;
             height: 35px;
             top: -35%;
-            
+
             span {
               font-size: 18px;
             }
@@ -348,63 +349,61 @@
       }
     }
   }
-  
+
   @media (max-width: 480px) {
     padding: 1.5rem 0.8rem;
     margin-top: 40px;
-    
+
     &_info {
       .tag {
         font-size: 10px;
         min-width: 130px;
         width: 130px;
       }
-      
+
       .title {
         font-size: 20px;
       }
-      
+
       .description {
         font-size: 12px;
       }
-      
-      
     }
-    
+
     &_image {
       width: 220px;
       height: 220px;
-      
+
       &_wrapper {
         width: 220px;
         height: 220px;
       }
-      
+
       .bubble {
         &_chat {
           width: 80px;
           height: 50px;
-          
+
           &_question {
             width: 30px;
             height: 30px;
-            
+
             span {
               font-size: 16px;
             }
           }
-          
+
           &_text {
             font-size: 11px;
             line-height: 11px;
           }
         }
-        
+
         &_info {
           width: 40px;
           height: 40px;
           bottom: 20px;
-          
+
           &_icon {
             img {
               width: 40%;

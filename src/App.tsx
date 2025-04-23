@@ -10,7 +10,7 @@ function App() {
         <Banner />
         <Info />
         <Faq />
-        <Questions />
+        {/* <Questions /> */}
       </Layout>
       <Review />
       <Contact />

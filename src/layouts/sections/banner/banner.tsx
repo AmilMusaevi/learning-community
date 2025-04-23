@@ -1,25 +1,45 @@
-
 import Button from "@/components/button/button";
 import bannerImg from "../../../assets/images/banner_image_profile.png";
 import chatSvg from "@/assets/icons/chat.svg";
 import askSvg from "@/assets/icons/question.svg";
 import styles from "./banner.module.scss";
+import { FaWhatsapp } from "react-icons/fa6";
 
 const Banner = () => {
+  const phoneNumber = "0516787628";
   return (
     <div className={styles.banner}>
       <div className={styles.banner_info}>
         <div className={styles.banner_info_wrapper}>
-          <div className={styles.tag}>Ayo bertanya</div>
-          <h1 className={styles.title}>Jangan Malu Untuk Bertanya</h1>
+          <div className={styles.tag}>Akademik İngilis dili</div>
+          <h1 className={styles.title}>İngilis dilini peşəkarından öyrənin</h1>
           <p className={styles.description}>
-            Cari jawaban dari pertanyaan yang kamu cari saat ini dengan mudah
-            dan cepat dari seluruh dunia
+            Effektiv və fərdi yanaşma ilə akademik ingilis dilini mənimsəyin
           </p>
           <div className={styles.buttons}>
-            <Button text="Daftar" type="secondary" />
-            <Button text="Masuk" className={styles.login_btn} type="primary" />
+            <a
+              href={`https://wa.me/${phoneNumber}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.whatsappLink}
+              aria-label="Contact us on WhatsApp"
+            >
+              <Button
+                type="secondary"
+                style={{
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  gap: "10px",
+                  padding: "4px",
+                }}
+              >
+                <i className="fa fa-phone" aria-hidden="true"></i>
+                <h3>Ödənişsiz sınaq</h3>
 
+                <FaWhatsapp className={styles.whatsappIcon} />
+              </Button>
+            </a>
           </div>
         </div>
       </div>
@@ -37,7 +57,7 @@ const Banner = () => {
               <img src={askSvg} alt="ask icon" />
             </div>
             <div className={styles.bubble_chat_text}>
-              <span>mau nanya nih</span>
+              <span>Görəsən bacaracam?</span>
             </div>
           </div>
 
